@@ -1,37 +1,75 @@
+/* Import custom fonts */
 @import url( slkscrb.ttf );
 @import url( slkscreb.ttf );
+
 @font-face {
   font-family: "Roboto";
   src: url("slkscrb.ttf") format("truetype");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "Robotos";
   src: url("slkscreb.ttf") format("truetype");
   font-weight: 400;
 }
-body{
+
+/* General body styling */
+body {
   background-color: black;
   background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-h1{
+
+/* Header styling */
+.header {
+  background-color: rgb(30, 30, 30);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header .hb {
+  background-color: rgb(122, 122, 122);
+  font-family: 'Roboto Mono', monospace;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 2px;
+}
+
+.header .hb:hover {
+  background-color: rgb(84, 241, 84); 
+  transform: scale(1.1);
+}
+
+/* Heading styling */
+h1 {
   text-align: center;
   font-family: "Roboto"; 
   color: rgb(255, 255, 255);
   letter-spacing: 5px;
-  font-size: 70px;
+  font-size: 6vw;
   -webkit-text-stroke-color: rgb(0, 0, 0);
   -webkit-text-stroke-width: 2px;
+  margin: 20px 0;
 }
-h2{
+
+h2 {
   text-align: center;
   color: rgb(255, 255, 255);
   font-family: "Robotos";
-  font-size: 40px;
+  font-size: 4vw;
   -webkit-text-stroke-color: rgb(0, 0, 0);
   -webkit-text-stroke-width: 0.5px;
 }
 
+/* Box styling */
 .box {
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #000;
@@ -40,88 +78,56 @@ h2{
   text-align: center;
   width: 90%;
   max-width: 500px;
-  aspect-ratio: 1/1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.ip{
+.ip {
   padding: 10px;
   font-family: monospace;
   font-size: 14px;
-  width: 250px;
+  width: 80%;
+  max-width: 250px;
+  margin: 10px 0;
 }
 
-button{
+button {
   background-color: rgb(255, 208, 0);
   font-family: monospace;
   padding: 10px;
-  width: 70px;
+  width: auto;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 5px;
 }
 
 button:hover {
   background-color: rgb(84, 241, 84);
 }
 
-.out{
+.out {
   font-family: monospace;
   font-size: 14px;
   text-align: center;
+  margin: 10px 0;
 }
 
-#hish,#hash {
+#hish, #hash {
   display: block;
-  margin: 1px auto;
-  padding: 5px;
+  margin: 10px auto;
+  padding: 10px 20px;
 }
 
-.header{
-  word-spacing: 1px;
-  background-color: rgb(30, 30, 30);
-  border: 5px solid rgb(30, 30, 30);
-}
-
-.hb{
-  width: auto;
-  background-color: rgb(122, 122, 122);
-  font-family: 'Roboto Mono', monospace;
-  padding: 20px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 2px;
-}
-
-.hb:hover {
-  background-color: rgb(84, 241, 84); 
-  transform: scale(1.1);
-}
-
-psg{
-  text-align: right;
-}
-
+/* Form styling */
 #frorm {
   display: flex;
   justify-content: center;
-  gap: 5px;
-  margin-top: 10px;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-
-.radio-group input[type="radio"] {
-  margin-right: 5px;
-}
-
-.dep{
-  font-family: monospace;
-  font-size: 14px;
-}
-
+/* Radio button styling */
 .radio-group {
   display: flex;
   justify-content: center;
@@ -140,7 +146,7 @@ psg{
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .radio-group input[type="radio"]:checked + label {
@@ -148,4 +154,32 @@ psg{
   color: white;
   border-color: aliceblue;
   transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+  
+  .header .hb {
+    padding: 10px;
+    margin: 5px 0;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  .ip {
+    width: 100%;
+  }
 }
