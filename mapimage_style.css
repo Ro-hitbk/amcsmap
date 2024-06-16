@@ -1,0 +1,40 @@
+
+body{
+  background-color: black;
+}
+
+#mapbox{
+  background-image: url( mapah.jpg );
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 1024px;
+  aspect-ratio: 1024/683;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-repeat: no-repeat;
+}
+
+.header{
+  word-spacing: 1px;
+  background-color: rgb(30, 30, 30);
+  border: 5px solid rgb(30, 30, 30);
+}
+
+.hb{
+  width: auto;
+  background-color: rgb(122, 122, 122);
+  font-family: 'Roboto Mono', monospace;
+  padding: 20px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hb:hover {
+  background-color: rgb(84, 241, 84); 
+  transform: scale(1.1);
+}
